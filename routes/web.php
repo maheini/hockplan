@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +19,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', function () {
-    return view('user/login');
+// Auth protected routes
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/account', [UserController::class, 'showAccountpage']);
+    Route::get('/logout', [UserController::class, 'logout']);
+});
+
+// Auth protected routes
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/login', [UserController::class, 'showLoginpage'])->name('login');
+    Route::get('/registerieren', [UserController::class, 'showRegisterpage']);
+    Route::post('/register', [UserController::class, 'register']);
+    Route::post('/login', [UserController::class, 'login']);
 });
 
 
-Route::get('/registerieren', function () {
-    return view('user/register');
-});
+
