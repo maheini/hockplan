@@ -134,3 +134,57 @@ p{
     border: none;
     border-radius: 2px;
 }
+
+/* Vertical menu style */
+.admin-menu{
+    height: 100vh;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    padding: 20px 0px 20px 5px;
+}
+.admin-menu .profile-image{
+    min-height: 120px;
+    margin: 20px auto;
+    width: 100%;
+}
+.admin-menu .profile-image i{
+    font-size: 120px;
+    text-align: center;
+    display: block;
+}
+
+.admin-menu ul{
+    padding: 0px;
+}
+
+.admin-menu li{
+    border-bottom: 2px solid lightgray;
+    list-style: none;
+}
+.admin-menu li,
+.admin-menu .menu-item{
+    transition: background-color 0.3s;
+}
+.admin-menu li{
+    padding-right: 3px;
+}
+
+.admin-menu li{
+    background-color: white;
+}
+.admin-menu li:hover,
+.admin-menu li.active{
+    background-color: #04AA6D;
+}
+.admin-menu li:hover .menu-item,
+.admin-menu li.active .menu-item{
+    background-color: #c6f7d9;
+}
+.admin-menu .menu-item{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    /*margin: 0px;*/
+    padding: 10px 20px;
+    background-color: white;
+}
