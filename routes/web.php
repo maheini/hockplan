@@ -15,13 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 // Auth protected routes
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/account', [UserController::class, 'showAccountpage']);
+    Route::get('/account/plaene', [UserController::class, 'showPlaenepage']);
     Route::get('/logout', [UserController::class, 'logout']);
 });
 
