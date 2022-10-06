@@ -54,6 +54,7 @@ p{
 }
 
 #header {
+    overflow: auto;
     background-color: rgb(61, 61, 61);
     overflow: hidden;
     box-shadow: 0px 7px 5px -5px gray;
@@ -88,7 +89,32 @@ p{
   float: right;
 }
 
+/* Title style */
+
+#title{
+    overflow: auto;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    box-shadow: inset 0px -4px 5px -3px gray, inset 0px 4px 5px -3px gray;
+}
+
+#title .inner{
+    margin: auto;
+    padding: 15px 30px;
+    max-width: 1200px;
+}
+
+#title h1{
+    margin: 0px;
+}
+
 /* Content style */
+
+#content{
+    overflow: auto;
+}
 
 #content .inner{
     padding: 20 10px;

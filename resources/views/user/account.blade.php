@@ -1,4 +1,4 @@
-@extends('scaffold/scaffold')
+@extends('scaffold/scaffold', ['title' => 'Account'] )
 
 @section('content')
 
